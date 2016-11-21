@@ -6,4 +6,9 @@
     <button (click)="decrement()">Decrement</button>
     <div></div>
     {{_counter | async}} 
+    <div>
+      <input #newTxtInput type="text" name="stringNew">
+      <button (click)="adda(newTxtInput.value);newTxtInput.value=''">adda</button>
+      {{_textModifier | async}}
+    </div>
 </main>

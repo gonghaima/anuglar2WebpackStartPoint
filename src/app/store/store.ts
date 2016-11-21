@@ -1,4 +1,6 @@
-import {provideStore} from '@ngrx/store';
-import {counter} from '../../app/reducer/counter';
+import * as counter from '../../app/reducer/counter';
+import {provideStore, combineReducers} from '@ngrx/store';
 
-export const store= provideStore({counter});
+const reducer = combineReducers(counter);
+
+export const store =provideStore(reducer);
